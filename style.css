@@ -1,0 +1,158 @@
+/* Styles personnalisés pour l'Annuaire Linkus */
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.96) translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.animate-modal {
+    animation: modalFadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Touches du Dialpad */
+.dial-key {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    height: 4rem;
+    transition: all 0.12s ease;
+    user-select: none;
+    cursor: pointer;
+    color: #0f172a;
+}
+
+.dial-key:hover {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+    transform: translateY(-1px);
+}
+
+.dial-key:active {
+    background-color: #d1fae5;
+    border-color: #10b981;
+    transform: scale(0.95);
+}
+
+/* Dialpad en mode sombre */
+.dark .dial-key {
+    background-color: #1e293b;
+    border-color: #334155;
+    color: #f8fafc;
+}
+
+.dark .dial-key:hover {
+    background-color: #334155;
+    border-color: #475569;
+}
+
+.dark .dial-key:active {
+    background-color: #064e3b;
+    border-color: #059669;
+}
+
+/* Boutons de filtrage actif */
+.filter-tab-btn.active {
+    background-color: #ecfdf5;
+    color: #047857;
+    font-weight: 600;
+}
+
+.dark .filter-tab-btn.active {
+    background-color: rgba(6, 78, 59, 0.4);
+    color: #34d399;
+}
+
+.filter-tab-btn.active svg {
+    color: #059669;
+}
+
+.dark .filter-tab-btn.active svg {
+    color: #34d399;
+}
+
+/* Bouton Société actif */
+.company-badge-btn.active {
+    background-color: #059669 !important;
+    color: #ffffff !important;
+    font-weight: 600;
+}
+.company-badge-btn.active span.count {
+    background-color: #047857 !important;
+    color: #ffffff !important;
+}
+
+.dark .company-badge-btn.active {
+    background-color: #059669 !important;
+    color: #ffffff !important;
+}
+
+.dark .company-badge-btn.active span.count {
+    background-color: #064e3b !important;
+    color: #a7f3d0 !important;
+}
+
+/* Scrollbars discrètes */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+    background: #334155;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+
+/* Effets de cartes contacts */
+.contact-card {
+    transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    border-color: #a7f3d0;
+}
+
+.dark .contact-card:hover {
+    border-color: #059669;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Mise en évidence du click-to-call */
+.call-btn {
+    transition: all 0.15s ease;
+}
+
+.call-btn:hover {
+    transform: scale(1.02);
+}
+
+.call-btn:active {
+    transform: scale(0.98);
+}
