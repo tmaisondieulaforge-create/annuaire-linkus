@@ -1,9 +1,0 @@
-services:
-  - type: web
-    name: annuaire-linkus
-    env: python
-    buildCommand: ""
-    startCommand: "python server.py"
-    plan: free
-    region: frankfurt # ou oregon
-    autoDeploy: true
